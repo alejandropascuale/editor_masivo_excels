@@ -23,8 +23,8 @@ def change_wb (path, sheet, cell, text):
     wb_sheet = wb[sheet]
     wb_sheet[cell] = text
     wb_sheet["B27"] = f"Ultima actualización: {format_date} por Alejandro Pascuale"
-    wb.save(path)
-    wb.close
+    wb.save(f"{path}")
+    wb.close()
     print(f"{file} editado exitosamente")
 
 edit_sheet = input("Ingrese el nombre de la hoja en la que se realizan las modificaciones: ")
