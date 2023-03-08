@@ -22,7 +22,6 @@ def change_wb (path, sheet, cell, text):
     wb = load_workbook(path)
     wb_sheet = wb[sheet]
     wb_sheet[cell] = text
-    # Agregar otro while en el que se pregunta por si hay mas cambios para hacer
     wb_sheet["B27"] = f"Ultima actualización: {format_date} por Alejandro Pascuale"
     wb.save(path)
     wb.close
