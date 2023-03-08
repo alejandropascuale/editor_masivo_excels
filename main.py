@@ -26,6 +26,10 @@ def change_wb (path, sheet, cell, text):
     wb_sheet["B27"] = f"Ultima actualización: {format_date} por Alejandro Pascuale"
     wb.save(path)
     wb.close
+    print(f"{file} editado exitosamente")
 
+edit_sheet = input("Ingrese el nombre de la hoja en la que se realizan las modificaciones: ")
+edit_cell = input("Ingrese la celda en la que se realizan las modificaciones: ")
+edit_text = input(f"Ingrese el texto que corresponde incluir en la celda {edit_cell}: ")
 for file in list_files:
-    change_wb(file, "Resumen", "C6", "10mm x 236mm x 1835mm")
+    change_wb(file, edit_sheet, edit_cell, edit_text)
